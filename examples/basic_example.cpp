@@ -82,7 +82,7 @@ char MyIoDriver::m_buffer[128]{};
 size_t MyIoDriver::m_rx_size{0};
 
 // static allocator for coroutine frames of the tasks
-using my_alloc = SequentialAllocator<AllocatorExceptionHandler, 1024>;
+using my_alloc = SequentialAllocator<AllocatorExceptionHandler, 256>;
 
 /// @brief Define a Task simply by declaring a function returning a task object.
 /// @return
